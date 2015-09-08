@@ -51,15 +51,5 @@
     ScratchExtensions.register('Ninus', descriptor, ext);
     
     
-    setInterval(function(){ 
-    	var xmlHttp = new XMLHttpRequest();
-    	xmlHttp.open( "GET", "http://127.0.0.1:15303/poll", false ); // false for synchronous request
-    	xmlHttp.send( null );
-    	var users = xmlHttp.responseText.Split("#");
-    	for(int i=0; i<6; i++)
-    	{
-    		
-    	}
-	}, 50);
 
 })({});
