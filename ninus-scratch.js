@@ -1,6 +1,33 @@
 (function(ext) {
 
-   
+   var usersData = [
+    	{id:-1, isTracked: false, position:[-100, -100], 
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors: {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
+    	},
+    	{id:-1, isTracked: false, position:[-100, -100], 
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
+    	},
+    	{id:-1, isTracked: false, position:[-100, -100], 
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
+    	},
+    	{id:-1, isTracked: false, position:[-100, -100], 
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
+    	},
+    	{id:-1, isTracked: false, position:[-100, -100], 
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
+    	},
+    	{id:-1, isTracked: false, position:[-100, -100], 
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
+    	}];
+	
+	
+	
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
