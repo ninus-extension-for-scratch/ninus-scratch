@@ -15,7 +15,6 @@
     // Block and block menu descriptions
     var descriptor = {
 	blocks: [
-		["r", "ID of user %m.users", "id"],
 		["b", "is user %m.users tracked", "isTracked"],
 		["r", "user %m.users position %m.coordinate", "position"],
 		["b", "is user %m.users %m.interaction", "interaction"],
