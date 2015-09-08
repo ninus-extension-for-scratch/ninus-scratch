@@ -62,6 +62,7 @@
     	return 5;
     };
 	
+    ext.updateData = function(void){};
 
 
     // Block and block menu descriptions
