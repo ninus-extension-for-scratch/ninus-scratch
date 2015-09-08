@@ -61,6 +61,8 @@
     	updateData();
     	return 5;
     };
+	
+
 
     // Block and block menu descriptions
     var descriptor = {
@@ -83,9 +85,6 @@
     ScratchExtensions.register('Ninus', descriptor, ext);
     
     recievingData = true;
-    
-    ext.updateData = function(){ 
-    	
-	};
+  
 
 })({});
