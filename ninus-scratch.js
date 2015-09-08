@@ -5,7 +5,7 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
+        return {status: 0, msg: 'Not recieving Ninus data'};
     };
 
     ext.power = function(base, exponent) {
@@ -31,5 +31,5 @@
 	};
 
     // Register the extension
-    ScratchExtensions.register('Sample extension', descriptor, ext);
+    ScratchExtensions.register('Ninus', descriptor, ext);
 })({});
