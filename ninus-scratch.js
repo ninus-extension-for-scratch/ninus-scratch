@@ -2,28 +2,28 @@
 
     var usersData = [
     	{id:-1, isTracked: false, position:[-100, -100], 
-    		interactions: {right-hand: false, left-hand: false, jumping: false},
-    		effectors: {right-hand:[0,0,0], left-hand:[0,0,0], right-foot:[0,0,0], left-foot:[0,0,0]}
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors: {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
     	},
     	{id:-1, isTracked: false, position:[-100, -100], 
-    		interactions: {right-hand: false, left-hand: false, jumping: false},
-    		effectors: {right-hand:[0,0,0], left-hand:[0,0,0], right-foot:[0,0,0], left-foot:[0,0,0]}
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
     	},
     	{id:-1, isTracked: false, position:[-100, -100], 
-    		interactions: {right-hand: false, left-hand: false, jumping: false},
-    		effectors: {right-hand:[0,0,0], left-hand:[0,0,0], right-foot:[0,0,0], left-foot:[0,0,0]}
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
     	},
     	{id:-1, isTracked: false, position:[-100, -100], 
-    		interactions: {right-hand: false, left-hand: false, jumping: false},
-    		effectors: {right-hand:[0,0,0], left-hand:[0,0,0], right-foot:[0,0,0], left-foot:[0,0,0]}
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
     	},
     	{id:-1, isTracked: false, position:[-100, -100], 
-    		interactions: {right-hand: false, left-hand: false, jumping: false},
-    		effectors: {right-hand:[0,0,0], left-hand:[0,0,0], right-foot:[0,0,0], left-foot:[0,0,0]}
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
     	},
     	{id:-1, isTracked: false, position:[-100, -100], 
-    		interactions: {right-hand: false, left-hand: false, jumping: false},
-    		effectors: {right-hand:[0,0,0], left-hand:[0,0,0], right-foot:[0,0,0], left-foot:[0,0,0]}
+    		interactions: {righthand: false, lefthand: false, jumping: false},
+    		effectors:  {righthand:[0,0,0], lefthand:[0,0,0], rightfoot:[0,0,0], leftfoot:[0,0,0]}
     	}];
 	
 	
@@ -90,22 +90,22 @@
     		usersData[i].position[0] = data[1].Split("/")[0];
     		usersData[i].position[1] = data[1].Split("/")[1];
     		
-    		usersData[i].interactions.right-hand= data[2].Split("/")[0];
-    		usersData[i].interactions.left-hand = data[2].Split("/")[1];
+    		usersData[i].interactions.righthand= data[2].Split("/")[0];
+    		usersData[i].interactions.lefthand = data[2].Split("/")[1];
     		usersData[i].interactions.jumping = data[2].Split("/")[2];
     		
-    		usersData[i].effectors.rightHand[0] = data[3].Split("/")[0];
-    		usersData[i].effectors.rightHand[1] = data[3].Split("/")[1];
-    		usersData[i].effectors.rightHand[2] = data[3].Split("/")[2];
-    		usersData[i].effectors.leftHand[0] = data[3].Split("/")[3];
-    		usersData[i].effectors.leftHand[1] = data[3].Split("/")[4];
-    		usersData[i].effectors.leftHand[2] = data[3].Split("/")[5];
-    		usersData[i].effectors.rightFoot[0] = data[3].Split("/")[6];
-    		usersData[i].effectors.rightFoot[1] = data[3].Split("/")[7];
-    		usersData[i].effectors.rightFoot[2] = data[3].Split("/")[8];
-    		usersData[i].effectors.leftFoot[0] = data[3].Split("/")[9];
-    		usersData[i].effectors.leftFoot[1] = data[3].Split("/")[10];
-    		usersData[i].effectors.leftFoot[2] = data[3].Split("/")[11];
+    		usersData[i].effectors.righthand[0] = data[3].Split("/")[0];
+    		usersData[i].effectors.righthand[1] = data[3].Split("/")[1];
+    		usersData[i].effectors.righthand[2] = data[3].Split("/")[2];
+    		usersData[i].effectors.lefthand[0] = data[3].Split("/")[3];
+    		usersData[i].effectors.lefthand[1] = data[3].Split("/")[4];
+    		usersData[i].effectors.lefthand[2] = data[3].Split("/")[5];
+    		usersData[i].effectors.rightfoot[0] = data[3].Split("/")[6];
+    		usersData[i].effectors.rightfoot[1] = data[3].Split("/")[7];
+    		usersData[i].effectors.rightfoot[2] = data[3].Split("/")[8];
+    		usersData[i].effectors.leftfoot[0] = data[3].Split("/")[9];
+    		usersData[i].effectors.leftfoot[1] = data[3].Split("/")[10];
+    		usersData[i].effectors.leftfoot[2] = data[3].Split("/")[11];
     		
     	}
 	}, 50);
