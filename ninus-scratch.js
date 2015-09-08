@@ -14,11 +14,21 @@
 
     // Block and block menu descriptions
     var descriptor = {
-        blocks: [
-            // Block type, block name, function name, param1 default value, param2 default value
-            ['r', '%n ^ %n', 'power', 2, 3],
-        ]
-    };
+	blocks: [
+		["r", "ID of user %m.users", "id"],
+		["b", "is user %m.users tracked", "isTracked"],
+		["r", "user %m.users position %m.coordinate", "position"],
+		["b", "is user %m.users %m.interaction", "interaction"],
+		["r", "user %m.users , effector %m.endeffector , coordinate %m.effectoraxis ", "effectorcoordinate"],
+	],
+	menus: {
+		users: ["1","2","3", "4", "5", "6"],
+		coordinate: ["horizontal", "vertical"],
+		interaction: ["raising-right-hand", "raising-left-hand", "jumping"],
+		effectoraxis: ["side", "up", "forward"],
+		endeffector: ["right-hand", "left-hand", "right-foot", "left-foot"],
+	}
+	};
 
     // Register the extension
     ScratchExtensions.register('Sample extension', descriptor, ext);
