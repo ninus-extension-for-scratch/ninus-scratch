@@ -65,9 +65,9 @@
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", false ); 
     	xmlHttp.send( null );
-    	xhr.onreadystatechange = 
+    	xmlHttp.onreadystatechange = 
             function () { 
-            	if(smlHttp.readyState == 4)
+            	if(xmlHttp.readyState == 4)
             	{
             		var users = xmlHttp.responseText.Split('#');
 			for(var i=0; i<6; i++)
