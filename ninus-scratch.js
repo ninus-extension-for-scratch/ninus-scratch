@@ -44,7 +44,7 @@
     	return usersData[user-1].isTracked;
     };
     ext.getPosition = function(user, coordinate) {
-    	getdata();
+    	ext.getdata();
     	return 57;
     	if(coordinate=="horizontal")
     		return usersData[0].position[0];
