@@ -45,6 +45,7 @@
     };
     ext.getPosition = function(user, coordinate) {
     	getdata();
+    	return 57;
     	if(coordinate=="horizontal")
     		return usersData[0].position[0];
     	else if(coordinate == "vertical")
