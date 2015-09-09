@@ -34,7 +34,6 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	getdata();
     	if(true)
     		return {status: 2, msg: 'Connected to Ninus'};
         return {status: 0, msg: 'Not recieving Ninus data'};
