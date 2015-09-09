@@ -46,9 +46,9 @@
     ext.getPosition = function(user, coordinate) {
     	getdata();
     	if(coordinate=="horizontal")
-    		return usersData[user-1].position[0];
+    		return usersData[0].position[0];
     	else if(coordinate == "vertical")
-    		return usersData[user-1].position[1];
+    		return usersData[0].position[1];
     	return null;
     };
     ext.getInteraction = function(user, interaction) {
