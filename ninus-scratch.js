@@ -63,8 +63,8 @@
     ext.getdata = function(){
     	
     	var xmlHttp = new XMLHttpRequest();
-    	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll" ); 
-    	xmlHttp.send( null );
+    	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
+    	xmlHttp.send( );
     	xmlHttp.onreadystatechange = 
             function () { 
             	if(xmlHttp.readyState == 4)
