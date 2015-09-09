@@ -70,28 +70,14 @@
     	for(var i=0; i<6; i++)
     	{
     		var data = users[i].Split('*');
-    		usersData[i].id = data[0].Split("/")[0];
-    		usersData[i].isTracked = data[0].Split("/")[1];
     		
-    		usersData[i].position[0] = data[1].Split("/")[0];
-    		usersData[i].position[1] = data[1].Split("/")[1];
+    		var userData = data[0].Split("/");
+    		usersData[i].id = userData[0];
+    		usersData[i].isTracked = userData[1];
     		
-    		usersData[i].interactions.righthand= data[2].Split("/")[0];
-    		usersData[i].interactions.lefthand = data[2].Split("/")[1];
-    		usersData[i].interactions.jumping = data[2].Split("/")[2];
-    		
-    		usersData[i].effectors.righthand[0] = data[3].Split("/")[0];
-    		usersData[i].effectors.righthand[1] = data[3].Split("/")[1];
-    		usersData[i].effectors.righthand[2] = data[3].Split("/")[2];
-    		usersData[i].effectors.lefthand[0] = data[3].Split("/")[3];
-    		usersData[i].effectors.lefthand[1] = data[3].Split("/")[4];
-    		usersData[i].effectors.lefthand[2] = data[3].Split("/")[5];
-    		usersData[i].effectors.rightfoot[0] = data[3].Split("/")[6];
-    		usersData[i].effectors.rightfoot[1] = data[3].Split("/")[7];
-    		usersData[i].effectors.rightfoot[2] = data[3].Split("/")[8];
-    		usersData[i].effectors.leftfoot[0] = data[3].Split("/")[9];
-    		usersData[i].effectors.leftfoot[1] = data[3].Split("/")[10];
-    		usersData[i].effectors.leftfoot[2] = data[3].Split("/")[11];
+    		var position = data[1].Split("/");
+    		usersData[i].position[0] = position[0];
+    		usersData[i].position[1] = position[1];
     	}
     	recievingData = true;
     	return true;
