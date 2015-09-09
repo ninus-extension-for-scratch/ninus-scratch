@@ -43,14 +43,14 @@
 
     ext.isTracked = function(user) {
     	getdata();
-    	return usersData[user].isTracked;
+    	return usersData[user-1].isTracked;
     };
     ext.getPosition = function(user, coordinate) {
     	getdata();
     	if(coordinate=="horizontal")
-    		return usersData[user].position[0];
+    		return usersData[user-1].position[0];
     	else if(coordinate == "vertical")
-    		return usersData[user].position[1];
+    		return usersData[user-1].position[1];
     	return null;
     };
     ext.getInteraction = function(user, interaction) {
@@ -93,6 +93,7 @@
     		usersData[i].effectors.leftfoot[1] = data[3].Split("/")[10];
     		usersData[i].effectors.leftfoot[2] = data[3].Split("/")[11];
     	}
+    	recievingData = true;
     	return true;
     };
 
@@ -116,8 +117,4 @@
 
     // Register the extension
     ScratchExtensions.register('Ninus', descriptor, ext);
-    
-    recievingData = true;
-  
-
 })({});
