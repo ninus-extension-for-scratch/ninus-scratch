@@ -31,7 +31,6 @@
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
-    ext.recievingData = false;
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
@@ -98,7 +97,6 @@
     		usersData[i].effectors.leftfoot[1] = effectors[10];
     		usersData[i].effectors.leftfoot[2] = effectors[11];
     	}
-    	recievingData = true;
     	return true;
     };
 
