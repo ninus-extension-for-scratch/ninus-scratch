@@ -75,31 +75,31 @@
 	    		var data = users[i].Split('*');
 	    		
 	    		var userData = data[0].Split("/");
-	    		usersData[i].id = userData[0];
-	    		usersData[i].isTracked = userData[1];
+	    		ext.usersData[i].id = userData[0];
+	    		ext.usersData[i].isTracked = userData[1];
 	    		
 	    		var position = data[1].Split("/");
-	    		usersData[i].position[0] = position[0];
-	    		usersData[i].position[1] = position[1];
+	    		ext.usersData[i].position[0] = position[0];
+	    		ext.usersData[i].position[1] = position[1];
 	    		
 	    		var interactions = data[2].Split("/");
-	    		usersData[i].interactions.righthand = interactions[0];
-	    		usersData[i].interactions.lefthand = interactions[1];
-	    		usersData[i].interactions.jumping = interactions[2];
+	    		ext.usersData[i].interactions.righthand = interactions[0];
+	    		ext.usersData[i].interactions.lefthand = interactions[1];
+	    		ext.usersData[i].interactions.jumping = interactions[2];
 	    		
 	    		var effectors = data[3].Split("/");
-	    		usersData[i].effectors.righthand[0] = effectors[0];
-	    		usersData[i].effectors.righthand[1] = effectors[1];
-	    		usersData[i].effectors.righthand[2] = effectors[2];
-	    		usersData[i].effectors.lefthand[0] = effectors[3];
-	    		usersData[i].effectors.lefthand[1] = effectors[4];
-	    		usersData[i].effectors.lefthand[2] = effectors[5];
-	    		usersData[i].effectors.rightfoot[0] = effectors[6];
-	    		usersData[i].effectors.rightfoot[1] = effectors[7];
-	    		usersData[i].effectors.rightfoot[2] = effectors[8];
-	    		usersData[i].effectors.leftfoot[0] = effectors[9];
-	    		usersData[i].effectors.leftfoot[1] = effectors[10];
-	    		usersData[i].effectors.leftfoot[2] = effectors[11];
+	    		ext.usersData[i].effectors.righthand[0] = effectors[0];
+	    		ext.usersData[i].effectors.righthand[1] = effectors[1];
+	    		ext.usersData[i].effectors.righthand[2] = effectors[2];
+	    		ext.usersData[i].effectors.lefthand[0] = effectors[3];
+	    		ext.usersData[i].effectors.lefthand[1] = effectors[4];
+	    		ext.usersData[i].effectors.lefthand[2] = effectors[5];
+	    		ext.usersData[i].effectors.rightfoot[0] = effectors[6];
+	    		ext.usersData[i].effectors.rightfoot[1] = effectors[7];
+	    		ext.usersData[i].effectors.rightfoot[2] = effectors[8];
+	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
+	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
+	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
 	    		}
             	}
             };
