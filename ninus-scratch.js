@@ -62,7 +62,6 @@
     };
 	
     ext.getdata = function(){
-    	return true;
     };
 
 
