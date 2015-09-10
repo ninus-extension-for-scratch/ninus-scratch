@@ -101,7 +101,10 @@
 	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
 	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
+	    		
 	    		}
+	    		
+	    		alert("pos: "+ext.usersData[0].position[0]+", "+ext.usersData[0].position[1]);
             	}
             };
     };
