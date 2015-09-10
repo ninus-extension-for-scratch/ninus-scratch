@@ -72,6 +72,8 @@
             	{
             		alert("Ready state!");
             		var users = xmlHttp.responseText.Split('#');
+            		
+	    		alert(xmlHttp.responseText);
 			for(var i=0; i<6; i++)
 			{
 	    		var data = users[i].Split('*');
@@ -102,7 +104,6 @@
 	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
 	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
-	    		alert("all data copied");
 	    		}
             	}
             };
