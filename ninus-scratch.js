@@ -71,11 +71,11 @@
             	if(xmlHttp.readyState == 4)
             	{
             		alert("Ready state!");
-	    		alert(xmlHttp.responseText);
             		var users = xmlHttp.responseText.split("#");
-            		
+            		alert("post Split!");
 			for(var i=0; i<6; i++)
 			{
+			alert("user: "+i+" "+users[i]);
 	    		var data = users[i].split("*");
 	    		
 	    		var userData = data[0].split("/");
