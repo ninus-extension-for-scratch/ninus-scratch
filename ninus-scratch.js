@@ -41,14 +41,14 @@
 
     ext.isTracked = function(user) {
     	ext.getdata();
-    	return usersData[user-1].isTracked;
+    	return ext.usersData[user-1].isTracked;
     };
     ext.getPosition = function(user, coordinate) {
     	ext.getdata();
     	if( coordinate == "horizontal" )
-    		return usersData[0].position[0];
+    		return ext.usersData[user-1].position[0];
     	else if( coordinate == "vertical" )
-    		return usersData[0].position[1];
+    		return ext.usersData[user-1].position[1];
     	return null;
     };
     ext.getInteraction = function(user, interaction) {
