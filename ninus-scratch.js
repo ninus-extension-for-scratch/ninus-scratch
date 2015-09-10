@@ -71,9 +71,9 @@
             	if(xmlHttp.readyState == 4)
             	{
             		alert("Ready state!");
+	    		alert(xmlHttp.responseText);
             		var users = xmlHttp.responseText.Split('#');
             		
-	    		alert(xmlHttp.responseText);
 			for(var i=0; i<6; i++)
 			{
 	    		var data = users[i].Split('*');
