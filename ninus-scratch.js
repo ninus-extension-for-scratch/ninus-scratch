@@ -45,19 +45,19 @@
     };
     ext.getPosition = function(user, coordinate) {
     	ext.getdata();
-    	if( coordinate == "horizontal" )
+    	if( coordinate.indexof("horizontal")!=-1 )
     		return ext.usersData[user-1].position[0];
-    	else if( coordinate == "vertical" )
+    	else if( coordinate.indexof("vertical")!=-1)
     		return ext.usersData[user-1].position[1];
     	return null;
     };
     ext.getInteraction = function(user, interaction) {
     	ext.getdata();
-    	if(interaction == "raising-right-hand")
+    	if(interaction.indexof("raising-right-hand")!=-1)
     		return ext.usersData[user-1].interactions.righthand;
-    	if(interaction == "raising-left-hand")
+    	if(interaction.indexof("raising-left-hand")!=-1)
     		return ext.usersData[user-1].interactions.lefthand;
-    	if(interaction == "jumping")
+    	if(interaction.indexof("jumping")!=-1)
     		return ext.usersData[user-1].interactions.jumping;
     	return false;
     };
@@ -68,13 +68,13 @@
     		axisIndex = 1;
     	if(axis.indexOf("forward")!=-1)
     		axisIndex = 2;
- 	if(effector == "right-hand")
+ 	if(effector.indexOf("right-hand")!=-1)
  		return ext.userData[user-1].effectors.righthand[axisIndex];
- 	if(effector == "left-hand")
+ 	if(effector.indexOf("left-hand")!=-1)
  		return ext.userData[user-1].effectors.lefthand[axisIndex];
- 	if(effector == "right-foot")
+ 	if(effector.indexOf("right-foot")!=-1)
  		return ext.userData[user-1].effectors.rightfoot[axisIndex];
- 	if(effector == "left-foot")
+ 	if(effector.indexOf("left-foot")!=-1)
  		return ext.userData[user-1].effectors.leftfoot[axisIndex];
     	return 0;
     };
@@ -138,10 +138,10 @@
 	],
 	menus: {
 		users: ["1","2","3", "4", "5", "6"],
-		coordinate: ["horizontal", "vertical"],
-		interaction: ["raising-right-hand", "raising-left-hand", "jumping"],
+		coordinate: ["horizontal ", "vertical "],
+		interaction: ["raising-right-hand ", "raising-left-hand ", "jumping "],
 		effectoraxis: ["side ", "up ", "forward "],
-		endeffector: ["right-hand", "left-hand", "right-foot", "left-foot"],
+		endeffector: ["right-hand ", "left-hand ", "right-foot ", "left-foot "],
 	}
 	};
 
