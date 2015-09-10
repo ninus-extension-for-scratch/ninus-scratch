@@ -73,22 +73,25 @@
             		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
-			alert("user: "+i+" "+users[i]);
+				
 	    		var data = users[i].split("*");
-	    		alert("data: "+data[0]+"---"+data[1]+"---"+data[2]+"---"+data[3]);
+	    		
 	    		var userData = data[0].split("/");
 	    		ext.usersData[i].id = userData[0];
 	    		ext.usersData[i].isTracked = userData[1];
 	    		
+	    		alert("1");
 	    		var position = data[1].split("/");
 	    		ext.usersData[i].position[0] = position[0];
 	    		ext.usersData[i].position[1] = position[1];
 	    		
+	    		alert("2");
 	    		var interactions = data[2].split("/");
 	    		ext.usersData[i].interactions.righthand = interactions[0];
 	    		ext.usersData[i].interactions.lefthand = interactions[1];
 	    		ext.usersData[i].interactions.jumping = interactions[2];
 	    		
+	    		alert("3");
 	    		var effectors = data[3].split("/");
 	    		ext.usersData[i].effectors.righthand[0] = effectors[0];
 	    		ext.usersData[i].effectors.righthand[1] = effectors[1];
@@ -102,6 +105,7 @@
 	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
 	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
+	    		alert("4");
 	    		}
             	}
             };
