@@ -64,9 +64,9 @@
     ext.getEffectorCoordinate = function(user, effector, axis) {
     	ext.getdata();
     	var axisIndex = 0;
-    	if(axis.contains("up"))
+    	if(axis.indexOf("up")!=-1)
     		axisIndex = 1;
-    	if(axis.contains("forward"))
+    	if(axis.indexOf("forward")!=-1)
     		axisIndex = 2;
  	if(effector == "right-hand")
  		return ext.userData[user-1].effectors.righthand[axisIndex];
