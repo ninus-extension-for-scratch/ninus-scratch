@@ -72,26 +72,26 @@
             	{
             		alert("Ready state!");
 	    		alert(xmlHttp.responseText);
-            		var users = xmlHttp.responseText.Split("#");
+            		var users = xmlHttp.responseText.split("#");
             		
 			for(var i=0; i<6; i++)
 			{
-	    		var data = users[i].Split('*');
+	    		var data = users[i].split("*");
 	    		
-	    		var userData = data[0].Split("/");
+	    		var userData = data[0].split("/");
 	    		ext.usersData[i].id = userData[0];
 	    		ext.usersData[i].isTracked = userData[1];
 	    		
-	    		var position = data[1].Split("/");
+	    		var position = data[1].split("/");
 	    		ext.usersData[i].position[0] = position[0];
 	    		ext.usersData[i].position[1] = position[1];
 	    		
-	    		var interactions = data[2].Split("/");
+	    		var interactions = data[2].split("/");
 	    		ext.usersData[i].interactions.righthand = interactions[0];
 	    		ext.usersData[i].interactions.lefthand = interactions[1];
 	    		ext.usersData[i].interactions.jumping = interactions[2];
 	    		
-	    		var effectors = data[3].Split("/");
+	    		var effectors = data[3].split("/");
 	    		ext.usersData[i].effectors.righthand[0] = effectors[0];
 	    		ext.usersData[i].effectors.righthand[1] = effectors[1];
 	    		ext.usersData[i].effectors.righthand[2] = effectors[2];
