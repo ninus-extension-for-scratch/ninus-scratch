@@ -75,23 +75,19 @@
 			{
 				
 	    		var data = users[i].split("*");
-	    		alert(data[0]);
 	    		var userData = data[0].split("/");
 	    		ext.usersData[i].id = userData[0];
 	    		ext.usersData[i].isTracked = "true" == (userData[1]);
 	    		
-	    		alert("1");
 	    		var position = data[1].split("/");
 	    		ext.usersData[i].position[0] = position[0];
 	    		ext.usersData[i].position[1] = position[1];
 	    		
-	    		alert("2");
 	    		var interactions = data[2].split("/");
 	    		ext.usersData[i].interactions.righthand = "true" == (interactions[0]);
 	    		ext.usersData[i].interactions.lefthand = "true" == (interactions[1]);
 	    		ext.usersData[i].interactions.jumping = "true" == (interactions[2]);
 	    		
-	    		alert("3");
 	    		var effectors = data[3].split("/");
 	    		ext.usersData[i].effectors.righthand[0] = effectors[0];
 	    		ext.usersData[i].effectors.righthand[1] = effectors[1];
@@ -105,7 +101,6 @@
 	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
 	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
-	    		alert("4");
 	    		}
             	}
             };
