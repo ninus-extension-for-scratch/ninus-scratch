@@ -53,11 +53,30 @@
     };
     ext.getInteraction = function(user, interaction) {
     	ext.getdata();
+    	if(interaction == "raising-right-hand")
+    		return ext.usersData[user-1].interactions.righthand;
+    	if(interaction == "raising-left-hand")
+    		return ext.usersData[user-1].interactions.lefthand;
+    	if(interaction == "jumping")
+    		return ext.usersData[user-1].interactions.jumping;
     	return false;
     };
     ext.getEffectorCoordinate = function(user, effector, axis) {
     	ext.getdata();
-    	return 5;
+    	var axisIndex = 0;
+    	if(axis == "up")
+    		axisIndex = 1;
+    	if(axis == "forward")
+    		axisIndex = 2;
+ 	if(effector == "right-hand")
+ 		return ext.userData[user-1].effectors.righthand[axisIndex];
+ 	if(effector == "left-hand")
+ 		return ext.userData[user-1].effectors.lefthand[axisIndex];
+ 	if(effector == "right-foot")
+ 		return ext.userData[user-1].effectors.rightfoot[axisIndex];
+ 	if(effector == "left-foot")
+ 		return ext.userData[user-1].effectors.leftfoot[axisIndex];
+    	return 0;
     };
 	
     ext.getdata = function(){
