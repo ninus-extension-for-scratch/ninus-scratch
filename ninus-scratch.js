@@ -75,7 +75,7 @@
 			{
 			alert("user: "+i+" "+users[i]);
 	    		var data = users[i].split("*");
-	    		alert("data: "+data[0]+" %%%% \n "+data[1]+" %%%% \n "+data[2]+" %%%% \n "+data[3]);
+	    		alert("data: "+data[0]+"---"+data[1]+"---"+data[2]+"---"+data[3]);
 	    		var userData = data[0].split("/");
 	    		ext.usersData[i].id = userData[0];
 	    		ext.usersData[i].isTracked = userData[1];
