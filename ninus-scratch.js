@@ -64,9 +64,9 @@
     ext.getEffectorCoordinate = function(user, effector, axis) {
     	ext.getdata();
     	var axisIndex = 0;
-    	if(axis == "up")
+    	if(axis.contains("up"))
     		axisIndex = 1;
-    	if(axis == "forward")
+    	if(axis.contains("forward"))
     		axisIndex = 2;
  	if(effector == "right-hand")
  		return ext.userData[user-1].effectors.righthand[axisIndex];
@@ -140,7 +140,7 @@
 		users: ["1","2","3", "4", "5", "6"],
 		coordinate: ["horizontal", "vertical"],
 		interaction: ["raising-right-hand", "raising-left-hand", "jumping"],
-		effectoraxis: ["side", "clear", "forward"],
+		effectoraxis: ["side ", "up ", "forward "],
 		endeffector: ["right-hand", "left-hand", "right-foot", "left-foot"],
 	}
 	};
