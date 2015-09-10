@@ -1,5 +1,5 @@
 (function(ext) {
-
+   ext.ready = false;
    ext.usersData = [
     	{id:-1, isTracked: false, position:[-100, -100], 
     		interactions: {righthand: false, lefthand: false, jumping: false},
@@ -34,9 +34,10 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	if(true)
+    	ext.getdata();
+    	if(ext.ready)
     		return {status: 2, msg: 'Connected to Ninus'};
-        return {status: 0, msg: 'Not recieving Ninus data'};
+        return {status: 1, msg: 'Not recieving Ninus data'};
     };
 
     ext.isTracked = function(user) {
@@ -122,7 +123,7 @@
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
 	    		
 	    		}
-
+			ext.ready = true;
             	}
             };
     };
