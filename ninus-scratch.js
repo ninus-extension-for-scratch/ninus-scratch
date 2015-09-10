@@ -103,8 +103,7 @@
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
 	    		
 	    		}
-	    		
-	    		alert("pos: "+ext.usersData[0].position[0]+", "+ext.usersData[0].position[1]);
+
             	}
             };
     };
