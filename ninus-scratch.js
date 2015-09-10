@@ -143,7 +143,8 @@
 		interaction: ["raising-right-hand ", "raising-left-hand ", "jumping "],
 		effectoraxis: ["side ", "up ", "forward "],
 		endeffector: ["right-hand ", "left-hand ", "right-foot ", "left-foot "],
-	}
+	},
+	url: 'http://communities.ninusuniverse.com'
 	};
 
     // Register the extension
