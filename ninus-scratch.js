@@ -65,10 +65,12 @@
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
     	xmlHttp.send( );
+    	alert("starting petition");
     	xmlHttp.onreadystatechange = 
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
+            		alert("Ready state!");
             		var users = xmlHttp.responseText.Split('#');
 			for(var i=0; i<6; i++)
 			{
@@ -100,6 +102,7 @@
 	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
 	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
+	    		alert("all data copied");
 	    		}
             	}
             };
