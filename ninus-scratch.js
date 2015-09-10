@@ -65,19 +65,17 @@
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
     	xmlHttp.send( );
-    	alert("starting petition");
     	xmlHttp.onreadystatechange = 
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		alert("Ready state!");
-            		var users = xmlHttp.responseText.split("#");
-            		alert("post Split!");
+            		var resp = xmlHttp.responseText;
+            		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
 			alert("user: "+i+" "+users[i]);
 	    		var data = users[i].split("*");
-	    		
+	    		alert("data: "+data[0]+" %%%% \n "+data[1]+" %%%% \n "+data[2]+" %%%% \n "+data[3]);
 	    		var userData = data[0].split("/");
 	    		ext.usersData[i].id = userData[0];
 	    		ext.usersData[i].isTracked = userData[1];
