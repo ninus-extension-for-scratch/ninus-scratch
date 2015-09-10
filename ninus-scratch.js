@@ -78,7 +78,7 @@
 	    		alert(data[0]);
 	    		var userData = data[0].split("/");
 	    		ext.usersData[i].id = userData[0];
-	    		ext.usersData[i].isTracked = userData[1];
+	    		ext.usersData[i].isTracked = Boolean(userData[1]);
 	    		
 	    		alert("1");
 	    		var position = data[1].split("/");
@@ -87,9 +87,9 @@
 	    		
 	    		alert("2");
 	    		var interactions = data[2].split("/");
-	    		ext.usersData[i].interactions.righthand = interactions[0];
-	    		ext.usersData[i].interactions.lefthand = interactions[1];
-	    		ext.usersData[i].interactions.jumping = interactions[2];
+	    		ext.usersData[i].interactions.righthand = Boolean(interactions[0]);
+	    		ext.usersData[i].interactions.lefthand = Boolean(interactions[1]);
+	    		ext.usersData[i].interactions.jumping = Boolean(interactions[2]);
 	    		
 	    		alert("3");
 	    		var effectors = data[3].split("/");
