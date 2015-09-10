@@ -45,19 +45,19 @@
     };
     ext.getPosition = function(user, coordinate) {
     	ext.getdata();
-    	if( coordinate.indexof("horizontal")!=-1 )
+    	if( coordinate.indexOf("horizontal")!=-1 )
     		return ext.usersData[user-1].position[0];
-    	else if( coordinate.indexof("vertical")!=-1)
+    	else if( coordinate.indexOf("vertical")!=-1)
     		return ext.usersData[user-1].position[1];
     	return null;
     };
     ext.getInteraction = function(user, interaction) {
     	ext.getdata();
-    	if(interaction.indexof("raising-right-hand")!=-1)
+    	if(interaction.indexOf("raising-right-hand")!=-1)
     		return ext.usersData[user-1].interactions.righthand;
-    	if(interaction.indexof("raising-left-hand")!=-1)
+    	if(interaction.indexOf("raising-left-hand")!=-1)
     		return ext.usersData[user-1].interactions.lefthand;
-    	if(interaction.indexof("jumping")!=-1)
+    	if(interaction.indexOf("jumping")!=-1)
     		return ext.usersData[user-1].interactions.jumping;
     	return false;
     };
