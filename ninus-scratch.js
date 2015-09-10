@@ -72,7 +72,7 @@
             	{
             		alert("Ready state!");
 	    		alert(xmlHttp.responseText);
-            		var users = xmlHttp.responseText.Split('#');
+            		var users = xmlHttp.responseText.Split("#");
             		
 			for(var i=0; i<6; i++)
 			{
