@@ -140,7 +140,7 @@
 		users: ["1","2","3", "4", "5", "6"],
 		coordinate: ["horizontal", "vertical"],
 		interaction: ["raising-right-hand", "raising-left-hand", "jumping"],
-		effectoraxis: ["side", "up", "forward"],
+		effectoraxis: ["side", "clear", "forward"],
 		endeffector: ["right-hand", "left-hand", "right-foot", "left-foot"],
 	}
 	};
