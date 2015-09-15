@@ -39,7 +39,7 @@
     	if(ext.ready && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.dataRecieved)
-    		return {status: 1, msg: 'Error receiving Ninus data'};
+    		return {status: 0, msg: 'Error receiving Ninus data'};
         return {status: 0, msg: 'Not receiving Ninus data'};
     };
 
