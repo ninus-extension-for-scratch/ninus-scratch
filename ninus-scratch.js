@@ -1,5 +1,6 @@
 (function(ext) {
    ext.ready = false;
+   ext.dataRecieved = false;
    ext.usersData = [
     	{id:-1, isTracked: false, position:[-100, -100], 
     		interactions: {righthand: false, lefthand: false, jumping: false},
@@ -35,9 +36,11 @@
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
     	ext.getdata();
-    	if(ext.ready)
+    	if(ext.ready && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
-        return {status: 1, msg: 'Not recieving Ninus data'};
+    	if(!ext.dataRecieved)
+    		return {status: 1, msg: 'Error receiving Ninus data'};
+        return {status: 0, msg: 'Not receiving Ninus data'};
     };
 
     ext.isTracked = function(user) {
@@ -85,6 +88,7 @@
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
     	xmlHttp.send( );
+    	ext.ready = true;
     	xmlHttp.onreadystatechange = 
             function () { 
             	if(xmlHttp.readyState == 4)
@@ -123,7 +127,7 @@
 	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
 	    		
 	    		}
-			ext.ready = true;
+			ext.dataRecieved = true;
             	}
             };
     };
