@@ -92,10 +92,9 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		var rawResp = xmlHttp.responseText.Split('&');
+            		var rawResp = xmlHttp.responseText.split("&");
             		var resp = rawResp[0];
             		ext.licensed = (rawResp[1].indexOf("1")!=-1);
-            		alert("this is licensed bit: "+rawResp[1]);
             		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
