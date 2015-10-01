@@ -1,5 +1,5 @@
 (function(ext) {
-   ext.ready = false;
+   ext.licensed = false;
    ext.dataRecieved = false;
    ext.usersData = [
     	{id:-1, isTracked: false, position:[-100, -100], 
@@ -36,10 +36,10 @@
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
     	ext.getdata();
-    	if(ext.ready && ext.dataRecieved)
+    	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
-    	if(!ext.dataRecieved)
-    		return {status: 0, msg: 'Error receiving Ninus data'};
+    	if(!ext.licensed)
+    		return {status: 1, msg: 'Ninus is not Licensed. Use Ninus Center menu to ask for a license or update it.'};
         return {status: 0, msg: 'Not receiving Ninus data'};
     };
 
@@ -88,12 +88,12 @@
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
     	xmlHttp.send( );
-    	ext.ready = true;
     	xmlHttp.onreadystatechange = 
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		var resp = xmlHttp.responseText;
+            		var resp = xmlHttp.responseText.Split('&')[0];
+            		ext.licensed = (xmlHttp.responseText.Split('&')[1] == "1")
             		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
