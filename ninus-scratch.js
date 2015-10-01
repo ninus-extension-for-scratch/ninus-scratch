@@ -92,8 +92,9 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		var resp = xmlHttp.responseText.Split('&')[0];
-            		ext.licensed = (xmlHttp.responseText.Split('&')[1] == "1")
+            		var rawResp = xmlHttp.responseText.Split('&');
+            		var resp = rawResp[0];
+            		ext.licensed = (rawResp[1].indexOf("1")!=-1)
             		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
