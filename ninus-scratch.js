@@ -94,8 +94,8 @@
             	{
             		var rawResp = xmlHttp.responseText.split("&");
             		var resp = rawResp[0];
-            		ext.licensed = (rawResp[1].indexOf("1")!=-1);
             		alert("License bit: "+rawResp[1]);
+            		ext.licensed = (rawResp[1].indexOf("1")!=-1);
             		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
