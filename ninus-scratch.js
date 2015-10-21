@@ -1,4 +1,5 @@
 (function(ext) {
+   ext.everythingStarted = false;
    ext.licensed = false;
    ext.dataRecieved = false;
    ext.usersData = [
@@ -35,7 +36,9 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	ext.getdata();
+    	if(!ext.everythingStarted)
+    		ext.getdata();
+    		ext.everythingStarted =true;
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.licensed)
