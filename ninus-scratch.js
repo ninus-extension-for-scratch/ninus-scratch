@@ -135,11 +135,10 @@
             	}
             };
     };
-
-    ext.vocabulary = [];
+    ext.vocabulary = new Array();
     ext.startVocabulary = function()
     {
-    	ext.vocabulary = [];
+    	ext.vocabulary = new Array();
     };
     ext.addWord = function(word)
     {
