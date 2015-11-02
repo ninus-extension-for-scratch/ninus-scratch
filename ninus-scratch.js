@@ -165,7 +165,9 @@
     ext.lastWordDetected = "";
     ext.wordDetected = function(word)
     {
+    	
     	var xmlHttp = new XMLHttpRequest();
+    	xmlHttp.timeout = 100;
     	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
     	xmlHttp.send( );
     	xmlHttp.onreadystatechange = 
