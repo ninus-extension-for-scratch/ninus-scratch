@@ -99,7 +99,7 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		if(xmlHttp.responseText.contains("&"))
+            		if(xmlHttp.responseText.indexOf("&")>-1)
             		{
 	            		var rawResp = xmlHttp.responseText.split("&");
 	            	
