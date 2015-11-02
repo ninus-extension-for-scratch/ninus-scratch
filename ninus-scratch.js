@@ -182,7 +182,7 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		if(xmlHttp.responseText != "null")
+            		if(xmlHttp.responseText != "null" && xmlHttp.responseText != "")
             		{
 	            		lastWordDetected = xmlHttp.responseText;
 	            		alert("Recieved: "+xmlHttp.responseText);
