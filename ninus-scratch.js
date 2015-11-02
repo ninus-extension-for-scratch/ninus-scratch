@@ -41,7 +41,7 @@
     		ext.everythingStarted =true;
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
-    	if(!ext.licensed)
+    	if(!ext.licensed && ext.dataRecieved)
     		return {status: 1, msg: 'Ninus is not Licensed. Use Ninus Center menu to ask for a license or update it.'};
         return {status: 0, msg: 'Not receiving Ninus data'};
     };
