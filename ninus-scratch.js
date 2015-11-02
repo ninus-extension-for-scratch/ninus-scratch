@@ -1,4 +1,8 @@
 (function(ext) {
+   ext.lastTimeUpdatedTracking = 0;
+   ext.lastTimeUpdatedSpeech = 0;
+   ext.minTimeBetweenUpdates = 50;
+   
    ext.everythingStarted = false;
    ext.licensed = false;
    ext.dataRecieved = false;
@@ -87,7 +91,9 @@
     };
 	
     ext.getdata = function(){
-    	
+    	if( getTime()-ext.lastTimeUpdatedTracking > ext.minTimeBetweenUpdates )
+    	{
+    	ext.lastTimeUpdatedTracking = getTime();
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
     	xmlHttp.send( );
@@ -139,6 +145,7 @@
             		}
             	}
             };
+    	}
     };
     ext.vocabulary = new Array();
     ext.startVocabulary = function()
@@ -166,6 +173,9 @@
     ext.wordDetected = function(word)
     {
     	
+    	if( getTime()-ext.lastTimeUpdatedSpeech > ext.minTimeBetweenUpdates )
+    	{
+  	ext.lastTimeUpdatedSpeech = getTime();
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.timeout = 100;
     	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
@@ -176,9 +186,10 @@
             	{
             		if(xmlHttp.responseText != "null")	
 	            		lastWordDetected = xmlHttp.responseText;
-	            		alert("Recieved: "+xmlHttp.responseText);
+	            	alert("Recieved: "+xmlHttp.responseText);
             	}
             };
+    	}
         if(ext.lastWordDetected == word)
         {
         	ext.lastWordDetected = "";
