@@ -172,7 +172,9 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		lastWordDetected = xmlHttp.responseText;
+            		if(xmlHttp.responseText != "null")	
+	            		lastWordDetected = xmlHttp.responseText;
+	            		alert("Recieved: "+xmlHttp.responseText);
             	}
             };
         if(ext.lastWordDetected == word)
