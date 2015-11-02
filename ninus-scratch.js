@@ -158,6 +158,25 @@
 	    	alert("http request: "+"http://127.0.0.1:15209/+words+"+wordsString+"+words+");
     	}
     };
+    ext.lastWordDetected = "";
+    ext.wordDetected = function(word)
+    {
+    	var xmlHttp = new XMLHttpRequest();
+    	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
+    	xmlHttp.send( );
+    	xmlHttp.onreadystatechange = 
+            function () { 
+            	if(xmlHttp.readyState == 4)
+            	{
+            		lastWordDetected = xmlHttp.responseText;
+            	}
+            };
+        if(ext.lastWordDetected == word)
+        {
+        	ext.lastWordDetected = "";
+        	return true;
+        }
+    };
     
     
     
