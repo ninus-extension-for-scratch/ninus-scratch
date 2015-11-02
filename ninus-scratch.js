@@ -88,7 +88,7 @@
     };
 	
     ext.getdata = function(){
-    	alert("Time: "+(new Date).getTime()+" - last: "+ext.lastTimeUpdatedTracking+" > "+ext.minTimeBetweenUpdates);
+    	//alert("Time: "+(new Date).getTime()+" - last: "+ext.lastTimeUpdatedTracking+" > "+ext.minTimeBetweenUpdates);
     	if( (new Date).getTime()-ext.lastTimeUpdatedTracking > ext.minTimeBetweenUpdates )
     	{
     	ext.lastTimeUpdatedTracking = (new Date).getTime();
