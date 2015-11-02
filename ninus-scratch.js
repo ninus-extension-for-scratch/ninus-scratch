@@ -184,8 +184,7 @@
             	{
             		if(xmlHttp.responseText != "null" && xmlHttp.responseText != "")
             		{
-	            		lastWordDetected = xmlHttp.responseText;
-	            		alert("Recieved: "+xmlHttp.responseText);
+	            		ext.lastWordDetected = xmlHttp.responseText;
             		}
             	}
             };
