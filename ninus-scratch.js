@@ -184,9 +184,11 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		if(xmlHttp.responseText != "null")	
+            		if(xmlHttp.responseText != "null")
+            		{
 	            		lastWordDetected = xmlHttp.responseText;
-	            	alert("Recieved: "+xmlHttp.responseText);
+	            		alert("Recieved: "+xmlHttp.responseText);
+            		}
             	}
             };
     	}
