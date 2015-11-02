@@ -97,7 +97,8 @@
             	{
             		var rawResp = xmlHttp.responseText.split("&");
             		var resp = rawResp[0];
-            		ext.licensed = rawResp[1] == "1";
+            		if(rawResp[1] == "1")
+            			ext.licensed = true;
             		var users = resp.split("#");
 			for(var i=0; i<6; i++)
 			{
