@@ -136,7 +136,32 @@
             };
     };
 
-
+    ext.vocabulary = [];
+    ext.startVocabulary = function()
+    {
+    	ext.vocabulary = [];
+    };
+    ext.addWord = function(word)
+    {
+    	ext.vocabulary.push(word);
+    };
+    ext.endVocabulary = function()
+    {
+    	if(ext.vocabulary.length > 0)
+    	{
+    		var wordsString = "";
+    		for(int i=0; i<(ext.vocabulary.length-1); i++)
+    			wordsString += ext.vocabulary[i] + "*";
+    		wordsString += ext.vocabulary[ext.vocabulary.length-1];
+	  	var xmlHttp = new XMLHttpRequest();
+	    	xmlHttp.open( "GET", "http://127.0.0.1:15209/+words+"+wordsString+"+words+", true ); 
+	    	xmlHttp.send( );
+	    	alert("http request: "+"http://127.0.0.1:15209/+words+"+wordsString+"+words+");
+    	}
+    };
+    
+    
+    
     // Block and block menu descriptions
     var descriptor = {
 	blocks: [
