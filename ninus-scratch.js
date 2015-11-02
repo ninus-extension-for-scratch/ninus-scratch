@@ -91,9 +91,9 @@
     };
 	
     ext.getdata = function(){
-    	if( getTime()-ext.lastTimeUpdatedTracking > ext.minTimeBetweenUpdates )
+    	if( (new Date).getTime()-ext.lastTimeUpdatedTracking > ext.minTimeBetweenUpdates )
     	{
-    	ext.lastTimeUpdatedTracking = getTime();
+    	ext.lastTimeUpdatedTracking = (new Date).getTime();
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:14303/poll", true ); 
     	xmlHttp.send( );
@@ -173,9 +173,9 @@
     ext.wordDetected = function(word)
     {
     	
-    	if( getTime()-ext.lastTimeUpdatedSpeech > ext.minTimeBetweenUpdates )
+    	if( (new Date).getTime()-ext.lastTimeUpdatedSpeech > ext.minTimeBetweenUpdates )
     	{
-  	ext.lastTimeUpdatedSpeech = getTime();
+  	ext.lastTimeUpdatedSpeech = (new Date).getTime();
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.timeout = 100;
     	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
