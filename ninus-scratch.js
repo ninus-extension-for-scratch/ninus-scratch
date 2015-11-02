@@ -149,7 +149,7 @@
     	if(ext.vocabulary.length > 0)
     	{
     		var wordsString = "";
-    		for(int i=0; i<(ext.vocabulary.length-1); i++)
+    		for(var i=0; i<(ext.vocabulary.length-1); i++)
     			wordsString += ext.vocabulary[i] + "*";
     		wordsString += ext.vocabulary[ext.vocabulary.length-1];
 	  	var xmlHttp = new XMLHttpRequest();
