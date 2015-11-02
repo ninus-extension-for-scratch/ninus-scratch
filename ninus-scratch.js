@@ -3,7 +3,6 @@
    ext.lastTimeUpdatedSpeech = 0;
    ext.minTimeBetweenUpdates = 50;
    
-   ext.everythingStarted = false;
    ext.licensed = false;
    ext.dataRecieved = false;
    ext.usersData = [
@@ -40,9 +39,7 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	if(!ext.everythingStarted)
-    		ext.getdata();
-    		ext.everythingStarted =true;
+    	ext.getdata();
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.licensed && ext.dataRecieved)
