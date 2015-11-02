@@ -95,44 +95,48 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-            		var rawResp = xmlHttp.responseText.split("&");
-            		var resp = rawResp[0];
-            		if(rawResp[1] == "1")
-            			ext.licensed = true;
-            		var users = resp.split("#");
-			for(var i=0; i<6; i++)
-			{
-				
-	    		var data = users[i].split("*");
-	    		var userData = data[0].split("/");
-	    		ext.usersData[i].id = userData[0];
-	    		ext.usersData[i].isTracked = "true" == (userData[1]);
-	    		
-	    		var position = data[1].split("/");
-	    		ext.usersData[i].position[0] = position[0];
-	    		ext.usersData[i].position[1] = position[1];
-	    		
-	    		var interactions = data[2].split("/");
-	    		ext.usersData[i].interactions.righthand = "true" == (interactions[0]);
-	    		ext.usersData[i].interactions.lefthand = "true" == (interactions[1]);
-	    		ext.usersData[i].interactions.jumping = "true" == (interactions[2]);
-	    		
-	    		var effectors = data[3].split("/");
-	    		ext.usersData[i].effectors.righthand[0] = effectors[0];
-	    		ext.usersData[i].effectors.righthand[1] = effectors[1];
-	    		ext.usersData[i].effectors.righthand[2] = effectors[2];
-	    		ext.usersData[i].effectors.lefthand[0] = effectors[3];
-	    		ext.usersData[i].effectors.lefthand[1] = effectors[4];
-	    		ext.usersData[i].effectors.lefthand[2] = effectors[5];
-	    		ext.usersData[i].effectors.rightfoot[0] = effectors[6];
-	    		ext.usersData[i].effectors.rightfoot[1] = effectors[7];
-	    		ext.usersData[i].effectors.rightfoot[2] = effectors[8];
-	    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
-	    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
-	    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
-	    		
-	    		}
-			ext.dataRecieved = true;
+            		if(xmlHttp.responseText.contains("&"))
+            		{
+	            		var rawResp = xmlHttp.responseText.split("&");
+	            	
+	            		var resp = rawResp[0];
+	            		if(rawResp[1] == "1")
+	            			ext.licensed = true;
+	            		var users = resp.split("#");
+				for(var i=0; i<6; i++)
+				{
+					
+		    		var data = users[i].split("*");
+		    		var userData = data[0].split("/");
+		    		ext.usersData[i].id = userData[0];
+		    		ext.usersData[i].isTracked = "true" == (userData[1]);
+		    		
+		    		var position = data[1].split("/");
+		    		ext.usersData[i].position[0] = position[0];
+		    		ext.usersData[i].position[1] = position[1];
+		    		
+		    		var interactions = data[2].split("/");
+		    		ext.usersData[i].interactions.righthand = "true" == (interactions[0]);
+		    		ext.usersData[i].interactions.lefthand = "true" == (interactions[1]);
+		    		ext.usersData[i].interactions.jumping = "true" == (interactions[2]);
+		    		
+		    		var effectors = data[3].split("/");
+		    		ext.usersData[i].effectors.righthand[0] = effectors[0];
+		    		ext.usersData[i].effectors.righthand[1] = effectors[1];
+		    		ext.usersData[i].effectors.righthand[2] = effectors[2];
+		    		ext.usersData[i].effectors.lefthand[0] = effectors[3];
+		    		ext.usersData[i].effectors.lefthand[1] = effectors[4];
+		    		ext.usersData[i].effectors.lefthand[2] = effectors[5];
+		    		ext.usersData[i].effectors.rightfoot[0] = effectors[6];
+		    		ext.usersData[i].effectors.rightfoot[1] = effectors[7];
+		    		ext.usersData[i].effectors.rightfoot[2] = effectors[8];
+		    		ext.usersData[i].effectors.leftfoot[0] = effectors[9];
+		    		ext.usersData[i].effectors.leftfoot[1] = effectors[10];
+		    		ext.usersData[i].effectors.leftfoot[2] = effectors[11];
+		    		
+		    		}
+				ext.dataRecieved = true;
+            		}
             	}
             };
     };
