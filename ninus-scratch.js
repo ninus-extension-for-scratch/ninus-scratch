@@ -155,7 +155,6 @@
 	  	var xmlHttp = new XMLHttpRequest();
 	    	xmlHttp.open( "GET", "http://127.0.0.1:15209/+words+"+wordsString+"+words+", true ); 
 	    	xmlHttp.send( );
-	    	alert("http request: "+"http://127.0.0.1:15209/+words+"+wordsString+"+words+");
     	}
     };
     ext.lastWordDetected = "";
