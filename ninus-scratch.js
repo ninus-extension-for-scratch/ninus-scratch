@@ -144,6 +144,10 @@
 		["r", "user %m.users position %m.coordinate", "getPosition"],
 		["b", "is user %m.users %m.interaction", "getInteraction"],
 		["r", "user %m.users , effector %m.endeffector , coordinate %m.effectoraxis ", "getEffectorCoordiate"],
+		[" ", "Start vocabulary", "startVocabulary"],
+		[" ", "End vocabulary", "endVocabulary"],
+		[" ", "Add word %s", "addWord"],
+		["h", "Word %s detected", "wordDetected"],
 	],
 	menus: {
 		users: ["1","2","3", "4", "5", "6"],
