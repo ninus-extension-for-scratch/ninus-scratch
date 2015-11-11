@@ -39,10 +39,10 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	if(!started){
+    	if(!ext.started){
     	return {status: 2, msg: 'Initializing'};}
     	ext.getdata();
-    	started = true;
+    	ext.started = true;
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.licensed && ext.dataRecieved)
