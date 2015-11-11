@@ -40,7 +40,8 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	if(!ext.started) return {status: 2, msg: 'Initializing'};
+    	return {status: 2, msg: 'Initializing'};
+    	if(!ext.started) 
     	ext.started = true;
     	ext.getdata();
     	if(ext.licensed && ext.dataRecieved)
