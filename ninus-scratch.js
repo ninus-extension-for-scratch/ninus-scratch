@@ -36,9 +36,12 @@
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
+    ext.started = false;
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
+    	if(!ext.started) return {status: 2, msg: 'Initializing'};
+    	ext.started = true;
     	ext.getdata();
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
