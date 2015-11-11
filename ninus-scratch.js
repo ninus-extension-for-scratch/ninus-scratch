@@ -170,9 +170,9 @@
     ext.lastWordDetected = "";
     ext.wordDetected = function(word)
     {
-    	
     	if( (new Date).getTime()-ext.lastTimeUpdatedSpeech > ext.minTimeBetweenUpdates )
     	{
+    	alert("checking word: "+word);
   	ext.lastTimeUpdatedSpeech = (new Date).getTime();
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
@@ -194,6 +194,7 @@
         	ext.lastWordDetected = "";
         	return true;
         }
+        return false;
     };
     
     
