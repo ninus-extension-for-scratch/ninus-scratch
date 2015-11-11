@@ -2,7 +2,6 @@
    ext.lastTimeUpdatedTracking = 0;
    ext.lastTimeUpdatedSpeech = 0;
    ext.minTimeBetweenUpdates = 50;
-   ext.started = false;
    ext.licensed = false;
    ext.dataRecieved = false;
    ext.usersData = [
@@ -36,19 +35,15 @@
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
-    ext.started = false;
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	return {status: 2, msg: 'Initializing'};
-    	if(!ext.started) 
-    	ext.started = true;
     	ext.getdata();
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.licensed && ext.dataRecieved)
     		return {status: 1, msg: 'Ninus is not Licensed. Use Ninus Center menu to ask for a license or update it.'};
-        return {status: 0, msg: 'Not receiving Ninus data'};
+        return {status: 1, msg: 'Not receiving Ninus data'};
     };
 
     ext.isTracked = function(user) {
