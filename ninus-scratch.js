@@ -188,9 +188,10 @@
             	}
             };
     	}
-        if(ext.lastWordDetected == word)
+        if(ext.lastWordDetected.localeCompare(word)==0)
         {
         	ext.lastWordDetected = "";
+        	alert("word: "+word);
         	return true;
         }
         return false;
