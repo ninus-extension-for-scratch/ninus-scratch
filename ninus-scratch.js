@@ -175,7 +175,6 @@
     	{
   	ext.lastTimeUpdatedSpeech = (new Date).getTime();
     	var xmlHttp = new XMLHttpRequest();
-    	xmlHttp.timeout = 1000;
     	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
     	xmlHttp.send( );
     	xmlHttp.onreadystatechange = 
