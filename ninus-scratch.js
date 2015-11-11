@@ -2,7 +2,7 @@
    ext.lastTimeUpdatedTracking = 0;
    ext.lastTimeUpdatedSpeech = 0;
    ext.minTimeBetweenUpdates = 50;
-   
+   ext.started = false;
    ext.licensed = false;
    ext.dataRecieved = false;
    ext.usersData = [
@@ -39,7 +39,10 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
+    	if(!started)
+    	return {status: 2, msg: 'Initializing'};
     	ext.getdata();
+    	started = true;
     	if(ext.licensed && ext.dataRecieved)
     		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.licensed && ext.dataRecieved)
@@ -185,6 +188,7 @@
             		if(xmlHttp.responseText != "null" && xmlHttp.responseText != "")
             		{
 	            		ext.lastWordDetected = xmlHttp.responseText;
+	            		alert("word: "+ext.lastWordDetected);
             		}
             	}
             };
