@@ -180,10 +180,8 @@
             function () { 
             	if(xmlHttp.readyState == 4)
             	{
-        		alert("word recieved: "+xmlHttp.responseText);
             		if(xmlHttp.responseText != "null" && xmlHttp.responseText != "")
             		{
-        			alert("word detected: "+xmlHttp.responseText);
 	            		ext.lastWordDetected = xmlHttp.responseText;
             		}
             	}
@@ -192,7 +190,6 @@
         if(ext.lastWordDetected.localeCompare(word)==0)
         {
         	ext.lastWordDetected = "";
-        	alert("words send: "+word);
         	return true;
         }
         return false;
