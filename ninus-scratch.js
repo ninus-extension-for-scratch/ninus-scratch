@@ -172,10 +172,10 @@
     {
     	if( (new Date).getTime()-ext.lastTimeUpdatedSpeech > ext.minTimeBetweenUpdates )
     	{
-    	alert("checking word: "+word);
   	ext.lastTimeUpdatedSpeech = (new Date).getTime();
     	var xmlHttp = new XMLHttpRequest();
     	xmlHttp.open( "GET", "http://127.0.0.1:15209/poll", true ); 
+    	smlHttp.timeout = 100;
     	xmlHttp.send( );
     	xmlHttp.onreadystatechange = 
             function () { 
@@ -184,7 +184,6 @@
             		if(xmlHttp.responseText != "null" && xmlHttp.responseText != "")
             		{
 	            		ext.lastWordDetected = xmlHttp.responseText;
-	            		alert("word: "+ext.lastWordDetected);
             		}
             	}
             };
