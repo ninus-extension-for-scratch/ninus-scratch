@@ -38,9 +38,9 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-    	//ext.getdata();
+    	ext.getdata();
     	if(ext.licensed && ext.dataRecieved)
-    		return {status: 1, msg: 'Connected to Ninus'};
+    		return {status: 2, msg: 'Connected to Ninus'};
     	if(!ext.licensed && ext.dataRecieved)
     		return {status: 1, msg: 'Ninus is not Licensed. Use Ninus Center menu to ask for a license or update it.'};
         return {status: 1, msg: 'Not receiving Ninus data'};
