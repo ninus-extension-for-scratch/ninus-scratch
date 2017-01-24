@@ -83,7 +83,7 @@
  		return ext.userData[user-1].effectors.rightfoot[axisIndex];
  	if(effector.indexOf("left-foot")!=-1)
  		return ext.userData[user-1].effectors.leftfoot[axisIndex];
-    	return 0;
+    	return -1;
     };
 	
     ext.getdata = function(){
