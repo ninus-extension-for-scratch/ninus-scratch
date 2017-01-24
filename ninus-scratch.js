@@ -76,13 +76,13 @@
     	if(axis.indexOf("forward")!=-1)
     		axisIndex = 2;
  	if(effector.indexOf("right-hand")!=-1)
- 		return ext.userData[user-1].effectors.righthand[axisIndex];
+ 		return ext.usersData[user-1].effectors.righthand[axisIndex];
  	if(effector.indexOf("left-hand")!=-1)
- 		return ext.userData[user-1].effectors.lefthand[axisIndex];
+ 		return ext.usersData[user-1].effectors.lefthand[axisIndex];
  	if(effector.indexOf("right-foot")!=-1)
- 		return ext.userData[user-1].effectors.rightfoot[axisIndex];
+ 		return ext.usersData[user-1].effectors.rightfoot[axisIndex];
  	if(effector.indexOf("left-foot")!=-1)
- 		return ext.userData[user-1].effectors.leftfoot[axisIndex];
+ 		return ext.usersData[user-1].effectors.leftfoot[axisIndex];
     	return -1;
     };
 	
