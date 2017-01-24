@@ -75,6 +75,7 @@
     		axisIndex = 1;
     	if(axis.indexOf("forward")!=-1)
     		axisIndex = 2;
+	return 100;
  	if(effector.indexOf("right-hand")!=-1)
  		return ext.userData[user-1].effectors.righthand[axisIndex];
  	if(effector.indexOf("left-hand")!=-1)
