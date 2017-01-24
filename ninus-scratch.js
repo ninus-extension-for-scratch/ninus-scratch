@@ -75,7 +75,6 @@
     		axisIndex = 1;
     	if(axis.indexOf("forward")!=-1)
     		axisIndex = 2;
-	return 100;
  	if(effector.indexOf("right-hand")!=-1)
  		return ext.userData[user-1].effectors.righthand[axisIndex];
  	if(effector.indexOf("left-hand")!=-1)
@@ -203,7 +202,7 @@
 		["b", "is user %m.users tracked", "isTracked"],
 		["r", "user %m.users position %m.coordinate", "getPosition"],
 		["b", "is user %m.users %m.interaction", "getInteraction"],
-		["r", "user %m.users , effector %m.endeffector , coordinate %m.effectoraxis", "getEffectorCoordiate"]
+		["r", "user %m.users , effector %m.endeffector , coordinate %m.effectoraxis", "getEffectorCoordinate"]
 	    	/*,
 		[" ", "Start vocabulary", "startVocabulary"],
 		[" ", "End vocabulary", "endVocabulary"],
