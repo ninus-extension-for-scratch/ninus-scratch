@@ -216,7 +216,7 @@
 		effectoraxis: ["side ", "up ", "forward "],
 		endeffector: ["right-hand ", "left-hand ", "right-foot ", "left-foot "],
 	},
-	url: "http://communities.ninusuniverse.com",
+	url: "http:/material.ninusuniverse.com/#scratch",
 	};
 
     // Register the extension
