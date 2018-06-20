@@ -40,10 +40,10 @@
     ext._getStatus = function() {
     	ext.getdata();
     	if(ext.licensed && ext.dataRecieved)
-    		return {status: 2, msg: 'Connected to Ninus'};
+    		return {status: 2, msg: 'Connected to Ninus.'};
     	if(!ext.licensed && ext.dataRecieved)
-    		return {status: 1, msg: 'Ninus is not Licensed. Use Ninus Center menu to ask for a license or update it.'};
-        return {status: 1, msg: 'Not receiving Ninus data'};
+    		return {status: 1, msg: 'Ninus Scratch only for PC testing without Ninus.'};
+        return {status: 1, msg: 'ERROR: Not receiving data. Run Ninus Scratch.'};
     };
 
     ext.isTracked = function(user) {
